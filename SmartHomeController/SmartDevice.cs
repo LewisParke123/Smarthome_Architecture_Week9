@@ -21,13 +21,21 @@ namespace SmartHomeController
         public string DeviceName
         {
             get { return deviceName; }
-            set { deviceName = value; }
+            private set
+            {
+                if (string.IsNullOrWhiteSpace(value)) 
+                {
+                    throw new ArgumentException("Device name cannot be empty.");
+                }
+                deviceName = value;
+            }
+            
         }
 
         public bool Status
         {
             get { return status; }
-            set {  status = value; }
+            set { status = value; }
         }
 
         // Parameterised constructor

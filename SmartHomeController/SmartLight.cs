@@ -15,7 +15,13 @@ namespace SmartHomeController
         public double Brightness
         {
             get { return brightness; }
-            set { brightness = value; }
+            private set 
+            { 
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Brightness must be a positive value.");
+                }
+                brightness = value; }
         }
 
         public string Colour
