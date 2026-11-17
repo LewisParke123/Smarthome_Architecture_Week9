@@ -13,13 +13,13 @@ namespace SmartHomeController
 
         public string ResolutionStatus
         {
-            get { return resolutionStatus }
-            set { resolutionStatus = value }
+            get { return resolutionStatus; }
+            set { resolutionStatus = value; }
         }
         public bool RecordingStatus
         {
-            get { return recordingStatus }
-            set { recordingStatus = value }
+            get { return recordingStatus; }
+            set { recordingStatus = value; }
         }
         // constructor
 
